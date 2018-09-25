@@ -31,7 +31,7 @@ If you do not, please contact sales (800-800-6245 ext. 3) for a trial.
 
 ### Installing and Running the Sample
 
-No installation is necessary for this sample project. Simply open the html file in your browser to run. 
+No installation is necessary for this sample project. Simply open the .html file in your browser to run. 
 
 When the sample is up and running, make sure to enter your license string first as provided by the account representative. 
 
