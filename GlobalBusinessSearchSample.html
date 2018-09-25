@@ -1,0 +1,383 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Global Business Search Demo</title>	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.js"></script>
+    <style>
+        .header img {
+            float: right;
+            width: 188px;
+            height: 80px;
+            background: #555;
+        }
+
+        .header h2 {
+            position: relative;
+            top: 18px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body class="ui container">
+    <p>	
+    <div class="header">
+        <img src="melissa-global-intelligence.jpg" width="188" height="80" alt="logo" />
+        <h2 class="ui header">Business Search Demo</h2>
+		
+		<br>
+    </div>	
+	<br>
+	<div class="wiki">
+		
+	</div>
+    <div class="main ui container">	
+        <div class="ui top attached tabular menu">
+            <a class="item active" data-tab="tab-name">Input</a>
+			<a class="item" data-tab="tab-name3">Request</a>
+            <a class="item" data-tab="tab-name2">Output</a>
+        </div>
+        <!-- Input tab -->
+        <div class="ui bottom attached tab segment active" data-tab="tab-name">
+            <div class="ui two column stackable grid container">
+                <div class="column">
+				<a href="http://wiki.melissadata.com/index.php?title=Global_Business_Search">Business Search Wiki</a>
+                    <!-- License Key -->
+                    <div class="ui info message">					
+                        <div class="header">
+                            License Key
+                        </div>
+                        Enter here your encrypted and unique license key from Melissa Data. This is necessary for including with each request to the web service. If you do not have a license key, please contact your Melissa Data sales representative at 1-800-MELISSA (1-800-635-4772)
+                    </div>
+                    <div class="ui input right fluid field">
+                        <input type="text" placeholder="License Key..." name="id">
+                    </div>
+                    <p>
+                    <!-- Column Responses -->
+                    <div class="ui info message">
+                        <div class="header">
+                            Column Responses
+                        </div>
+                        <ul class="list">
+                            <li>Phone - Return all available phone numbers</li>
+                            <li>EIN - Return the Employer Identification Number</li>
+							<li>Web Address - Return URL / Website</li>
+							<li>Location Type - Return whether a business is a headquarters, branch or single location</li>
+							<li>Stock Ticker - Return the unique series of letters assigned to a security for trading</li>
+							<li>Previous Address - Return all known previous addresses</li>
+                        </ul>
+                    </div>
+					<div class="ui two column stackable grid container">
+						<div class="column">
+						   <div class="ui checkbox">
+								<input type="checkbox" name="phoneCheckbox">
+								<label>Phone</label>
+							</div>
+							<br>
+							<div class="ui checkbox">
+								<input type="checkbox" name="einCheckbox">
+								<label>EIN</label>
+							</div>
+							<br>
+							<div class="ui checkbox">
+								<input type="checkbox" name="webAddressCheckbox">
+								<label>WebAddress</label>
+							</div>
+							<br>
+							<div class="ui checkbox">
+								<input type="checkbox" name="locationTypeCheckbox">
+								<label>Location Type</label>
+							</div>
+							<br>						
+						</div>
+						<div class="column">
+							<div class="ui checkbox">
+								<input type="checkbox" name="stockTickerCheckbox">
+								<label>Stock Ticker</label>
+							</div>
+							<br>
+							<div class="ui checkbox">
+								<input type="checkbox" name="previousAddressCheckbox">
+								<label>Previous Address</label>
+							</div>
+							<br>
+							<div class="ui checkbox">
+								<input type="checkbox" name="grpAllCheckbox">
+								<label>Group All</label>
+							</div>
+							<br>
+						</div>
+					</div>
+                    <p>
+                    <!-- Search options -->
+                    <div class="ui info message">
+                        <div class="header">
+                            Search Options
+                        </div>
+						<ul class="list">
+                            <li>Search Type - Select which piece of information to use as the primary pivot when verifying or appending information.</li>
+                            <li>Search Condition - Allows for setting certain conditions for when to return records.</li>
+                        </ul>
+                    </div>
+                    <!-- Search option - Search Type -->
+                    <div class="ui selection dropdown">
+                        <input type="hidden" name="searchType">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Search Type</div>
+                        <div class="menu">
+                            <div class="item" data-value="Auto">Auto</div>
+                            <div class="item" data-value="CompanySearch">Company Search</div>
+                            <div class="item" data-value="AddressSearch">Address Search</div>
+                            <div class="item" data-value="PhoneSearch">Phone Search</div>						
+                        </div>
+                    </div>
+                    <!-- Search option - Search Condition -->
+                    <div class="ui selection dropdown">
+                        <input type="hidden" name="searchCondition">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">Search Condition</div>
+                        <div class="menu">
+                            <div class="item" data-value="Strict">Exact</div>
+                            <div class="item" data-value="Loose">Loose</div>
+                        </div>
+                    </div>
+                    <p>                    
+                    <!-- Sort options -->
+                    <div class="ui info message">
+                        <div class="header">
+                            Sort Options
+                        </div>
+                    </div>
+                    <p>
+                    <div class="content">
+                        <!-- Sort option - Determine what piece of information to order response -->
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="sortBy">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Sort By</div>
+                            <div class="menu">
+                                <div class="item" data-value="PostalCode">Postal Code</div>
+                                <div class="item" data-value="CityState">City State</div>
+                                <div class="item" data-value="AddressLine1">Address Line</div>
+                                <div class="item" data-value="CompanyName">Company Name</div>
+                                <div class="item" data-value="MelissaEnterpriseKey">Melissa Enterprise Key</div>
+                                <div class="item" data-value="StockTicker">Stock Ticker</div>
+                                <div class="item" data-value="WebAddressURL">Web Address</div>
+                                <div class="item" data-value="MelissaAddressKey">Melissa Address Key</div>
+                                <div class="item" data-value="MelissaAddressKeyBase">Melissa Address Key Base</div>
+                            </div>
+                        </div>
+                        <!-- Sort Order option - Order by Ascending or Descending -->
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="sortOrder">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Sort Order</div>
+                            <div class="menu">
+                                <div class="item" data-value="ascending">Ascending</div>
+                                <div class="item" data-value="descending">Descending</div>
+                            </div>
+                        </div>
+                        <p>
+                    </div>
+                    <!-- Return Options options -->
+                    <div class="ui info message">
+                        <div class="header">
+                            Return options
+                        </div>
+                    </div>
+                    <p>
+                    <div class="content">
+                        <!-- Max Phone option - Determine up to how many phone numbers you would like to receive -->
+                        <div class="ui input">
+                            <input type="text" name="maxPhone" placeholder="Max Phone Numbers...">
+                        </div>
+						<!-- Max Pages option option - Determine up to how many pages you would like to receive -->
+                        <div class="ui input">
+                            <input type="text" name="maxPages" placeholder="Go To Page Number...">
+                        </div>
+                        <!-- Max Records Per Page option - Determine how many records will be appended per page -->
+                        <div class="ui input">
+                            <input type="text" name="maxRecordsPerPage" placeholder="Max Records Per Page...">
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="column">
+					<h1>Personal Identity Information</h1>
+					<p>
+                    <h4>Company</h4>
+                    <p>
+                    <div class="ui input right fluid">
+                        <input type="text" placeholder="Company Name..." name="comp">
+                    </div>
+					<h4>Address</h4>
+                    <div class="ui input right fluid">
+                        <input type="text" placeholder="Address1..." name="a1">
+                    </div>
+                    <p>
+					<div class="ui input right fluid">
+                        <input type="text" placeholder="Address2..." name="a2">
+                    </div>
+                    <p>
+					<div class="ui input right fluid">
+                        <input type="text" placeholder="Address3..." name="a3">
+                    </div>
+                    <p>
+					<div class="ui input right fluid">
+                        <input type="text" placeholder="Address4..." name="a4">
+                    </div>
+                    <p>
+					<div class="ui input right fluid">
+                        <input type="text" placeholder="Address5..." name="a5">
+                    </div>
+                    <p>
+                    <div class="ui input right fluid">
+                        <input type="text" placeholder="City/Locality..." name="loc">
+                    </div>
+                    <p>
+                    <div class="ui input right fluid">
+                        <input type="text" placeholder="State/Administrative Area..." name="area">
+                    </div>
+                    <p>
+                    <div class="ui input right fluid">
+                        <input type="text" placeholder="Zip/Postal Code..." name="postal">
+                    </div>
+                    <p>
+					<h4>Other</h4>
+                    <div class="ui input right fluid">
+                        <input type="text" placeholder="Phone Number..." name="phone">
+                    </div>
+                    <p>
+                    <div class="ui input right fluid">
+                        <input type="text" placeholder="Web Address..." name="web">
+                    </div>
+                    <p>
+                    <div class="ui input right fluid">
+                        <input type="text" placeholder="Melissa Address Key..." name="mak">
+                    </div>
+                    <p>
+                    <div class="ui input right fluid">
+                        <input type="text" placeholder="Stock Ticker..." name="stock">
+                    </div>
+                    <p>
+
+                    <p><br>
+                    <button class="ui icon button normal" onclick="doClear()">
+                        <i class="erase icon"></i>
+                        Clear
+                    </button>
+                    <button class="ui icon button positive" onclick="doVerify()">
+                        <i class="thumbs up icon"></i>
+                        Verify
+                    </button>
+                </div>
+            </div>
+        </div>
+
+		<!-- REST tab -->
+        <div class="ui bottom attached tab segment" data-tab="tab-name3">
+            <pre name="restOutput">
+                Run a record through first
+            </pre>
+        </div>
+		
+        <!-- Output tab -->
+        <div class="ui bottom attached tab segment" data-tab="tab-name2">
+            <pre name="jsonOutput">
+                Run a record through first
+            </pre>
+        </div>
+        <p><br>
+    </div>
+
+    <script>
+        $('.menu .item').tab();
+        $('.ui.dropdown').dropdown();
+        $('.ui.accordion').accordion();
+
+        function getColumnResponses() {
+            var columnResponses = "";
+            
+            if ($('input[name=phoneCheckbox]').is(':checked')) columnResponses += "Phone,";
+            if ($('input[name=einCheckbox]').is(':checked')) columnResponses += "EIN,";
+			if ($('input[name=webAddressCheckbox]').is(':checked')) columnResponses += "WebAddress,";
+			if ($('input[name=locationTypeCheckbox]').is(':checked')) columnResponses += "LocationType,";
+			if ($('input[name=stockTickerCheckbox]').is(':checked')) columnResponses += "StockTicker,";
+			if ($('input[name=previousAddressCheckbox]').is(':checked')) columnResponses += "PreviousAddress,";
+			if ($('input[name=grpAllCheckbox]').is(':checked')) columnResponses += "GrpAll,";
+            columnResponses = columnResponses.replace(/,\s*$/, "");
+
+            return columnResponses;
+        }
+
+        function getSearchOpt() {
+            var opt = "";
+
+            // get address options
+            if ($('input[name=searchType]').val() != "") opt += "SearchType:" + $('input[name=searchType]').val() + ",";
+            if ($('input[name=searchCondition]').val() != "") opt += "SearchCondition:" + $('input[name=searchCondition]').val() + ",";
+			// get name options
+            if ($('input[name=sortBy]').val() != "") opt += "SortBy:" + $('input[name=sortBy]').val() + ",";
+            if ($('input[name=sortOrder]').val() != "" && $('input[name=sortBy]').val() != "")
+			{
+				opt = opt.replace(/,\s*$/, "");
+				opt += "-" + $('input[name=sortOrder]').val() + ",";
+			}				
+            // get email options
+            if ($('input[name=maxPhone]').val() != "") opt += "MaxPhone:" + $('input[name=maxPhone]').val() + ",";
+            if ($('input[name=maxPages]').val() != "") opt += "Page:" + $('input[name=maxPages]').val() + ",";
+            if ($('input[name=maxRecordsPerPage]').val() != "") opt += "RecordsPerPage:" + $('input[name=maxRecordsPerPage]').val() + ",";
+
+            return opt;
+        }
+
+		function getUserInput() {
+			var userInput = "";
+			
+			userInput += "&comp=" + $('input[name=comp]').val();
+			userInput += "&a1=" + $('input[name=a1]').val();
+			userInput += "&a2=" + $('input[name=a2]').val();
+			userInput += "&a3=" + $('input[name=a3]').val();
+			userInput += "&a4=" + $('input[name=a4]').val();
+			userInput += "&a5=" + $('input[name=a5]').val();
+			userInput += "&loc=" + $('input[name=loc]').val();
+			userInput += "&area=" + $('input[name=area]').val();
+			userInput += "&postal=" + $('input[name=postal]').val();
+			userInput += "&phone=" + $('input[name=phone]').val();
+			userInput += "&stock=" + $('input[name=stock]').val();
+			userInput += "&mak=" + $('input[name=mak]').val();
+			userInput += "&web=" + $('input[name=web]').val();
+			
+			return userInput;
+		}
+
+        function doVerify() {
+			var xhttp = new XMLHttpRequest();
+			var url = "http://globalbusinesssearch.melissadata.net/WEB/dobusinesssearch?";
+			url += "&id=" + encodeURIComponent($('input[name=id]').val());
+			url += "&cols=" + getColumnResponses().replace(/,\s*$/, "");
+			url += "&opt=" + getSearchOpt().replace(/,\s*$/, "");
+			url += getUserInput();
+			xhttp.open("GET", url, false);
+			xhttp.send();
+			console.log(url);
+			var response = JSON.parse(xhttp.responseText);
+			
+			$('pre[name=restOutput]').text('\n\n' + url + '\n\n\n');
+			$('pre[name=jsonOutput]').text(JSON.stringify(response, null, '\t'));
+			$('.ui.menu').find('.item').tab('change tab', 'tab-name2');
+        }
+
+        function doClear() {
+            $("input").each(function(index) {
+                $(this).val('');
+            })
+        }
+
+    </script>
+</body>
+</html>
