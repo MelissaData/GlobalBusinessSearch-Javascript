@@ -1,9 +1,9 @@
 ![alt text](https://www.melissa.com/_borders17/nav/2017/images/melissa-global-intelligence.png)
 
-# Business Coder API HTML/JavaScript REST Sample Code
+# Global Business Search API HTML/JavaScript REST Sample Code
 
-This is a sample code for Melissa's Business Coder API. It is written in HTML and JavaScript and accesses the API through REST. 
-This sample is intended to show the functionality of the Business Coder Web Service and how to call the service in HTML/JavaScript. 
+This is a sample code for Melissa's Global Business Search API. It is written in HTML and JavaScript and accesses the API through REST. 
+This sample is intended to show the functionality of the Global Business Search Web Service and how to call the service in HTML/JavaScript. 
 
 
 ## Getting Started
@@ -31,7 +31,7 @@ If you do not, please contact sales (800-800-6245 ext. 3) for a trial.
 
 ### Installing and Running the Sample
 
-No installation is necessary for this sample project. Simply open the BusinessCoderDemo.html file in your browser to run. 
+No installation is necessary for this sample project. Simply open the html file in your browser to run. 
 
 When the sample is up and running, make sure to enter your license string first as provided by the account representative. 
 
