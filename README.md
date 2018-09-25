@@ -42,14 +42,14 @@ Then you may submit a request to the API.
 
 For free technical support please call us at 800-MELISSA ext. 4 (800-635-4772 ext. 4) or email us at tech@MelissaData.
 
-To subscribe to the Business Coder Web Service, please contact our sales department at 800-MELISSA ext. 3 (800-635-4772 ext. 3).
+To subscribe to the Global Business Search Web Service, please contact our sales department at 800-MELISSA ext. 3 (800-635-4772 ext. 3).
 
 
 ## Copyright Notice
 
 (C) 2018 Melissa Data Corporation. All rights reserved.
 
-Business Coder Web Service is a trademark and 1-800-MELISSA is a registered trademark
+Global Business Search Web Service is a trademark and 1-800-MELISSA is a registered trademark
 of Melissa Data Corporation.
 
 All other brands and products are trademarks of their respective holder(s).
